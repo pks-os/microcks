@@ -22,7 +22,7 @@ services:
     command: ["start-dev", "--import-realm"]
 
   postman:
-    image: quay.io/microcks/microcks-postman-runtime:latest
+    image: quay.io/microcks/microcks-postman-runtime:0.6.0
     container_name: microcks-postman-runtime
     platform: linux/amd64
 
@@ -31,7 +31,7 @@ services:
       - mongo
       - keycloak
       - postman
-    image: quay.io/microcks/microcks:latest
+    image: quay.io/microcks/microcks:1.10.1
     container_name: microcks
     ports:
       - "8080:8080"
